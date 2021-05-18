@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: 'Quicksand';
+    font-size: 2em;
+    background-color: #aaaaaa; 
+       display: grid;
+    place-content: center;
+    height: 100vh;
+    transition: 1.5s ease-out;
+}
+div.back{
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #272727;
+    z-index: -1;
+    top: 0;
+    transition: .5s ease-out;
+}
+body > div.parent{
+   background-color: #ffffff21;
+   padding: 5vh 3vw;
+
+}
+body > div.parent > div.child > div.black , div.white {
+    background-color: #272727;
+    padding: 3vh 15vw;
+    transition: .5s ease-out;
+}
+body > div.parent > div.child > div.black{
+    border-top-left-radius: 30px;
+    background-color: #ffffff; 
+}
+body > div.parent > div.child > div.white{
+    border-bottom-right-radius: 30px;
+    background-color: #000000;
+
+}
+body > div.parent > div.child >div.black > p.black{
+    color: #000000;
+    transition: .5s ease-out;
+}
+body > div.parent > div.child > div.white > p.white{
+    color: #ffffff;
+    transition: .5s ease-out;
+}
+@media only screen and (max-width:600px){
+    p{
+        font-size: 1.5rem;
+    }
+    body > div.parent > div.child > div.black , div.white {
+        padding: 3vh 10vw;
+    }
+    body > div.parent {
+        padding: 5vh 10vw;
+    }
+    body > div.back{
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+}
